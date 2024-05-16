@@ -26,6 +26,7 @@
     <div id="app">
         <input type="checkbox" v-model="isborder">테두리 적용 여부<br>
         <button class="staticStyle" :class="[color, isborder ? border : '']">1테스트</button>
+        <button class="staticStyle" :class="[color, {'btnBorder' : isborder}]">테스트</button>
         <button :class="border">2테스트</button>
         <button :class="[layout, color, border]">3테스트</button>
     </div>
@@ -39,9 +40,11 @@
                 color : 'btnColor',
                 layout : 'btnLayout',
                 border : 'btnBorder',
-                isborder : false
+                isborder : true
             }
         }
     }).mount('#app')
 </script>
 </html>
+
+13분까지!
