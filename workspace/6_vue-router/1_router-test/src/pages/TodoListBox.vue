@@ -17,11 +17,11 @@
 </template>
 <script>
 let i = 4;
-import TodoList from "./components/TodoList.vue";
-import InputCom from "./components/InputCom.vue";
+import TodoList from "@/components/TodoList.vue";
+import InputCom from "@/components/InputCom.vue";
 
 export default {
-    name: "App",
+    name: "TodoListBox",
     components: { TodoList, InputCom },
 
     created() {
@@ -29,6 +29,7 @@ export default {
         this.emitter.on("delete", this.deleteTodo);
         this.emitter.on("toggle", this.toggleCompleted);
     },
+
     data() {
         return {
             todoList: [
